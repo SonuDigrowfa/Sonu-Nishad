@@ -1,36 +1,25 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: url(#linear-gradient);
-      }
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#000000"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="800px"
+	 height="800px" viewBox="0 0 512 512" xml:space="preserve">
 
-      .cls-2 {
-        fill: url(#linear-gradient-2);
-      }
+<g id="7935ec95c421cee6d86eb22ecd133f51">
 
-      .cls-3 {
-        fill: url(#linear-gradient-3);
-      }
-    </style>
-    <linearGradient id="linear-gradient" x1="401.51" y1="-16233.83" x2="91.26" y2="-15923.58" gradientTransform="matrix(1, 0, 0, -1, 0, -15870)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f58b1f"/>
-      <stop offset="0.49" stop-color="#ed6723"/>
-      <stop offset="1" stop-color="#ee3e30"/>
-    </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="-16.66" y1="-15926.82" x2="442.85" y2="-16250.52" gradientTransform="matrix(1, 0, 0, -1, 0, -15870)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#c41e51"/>
-      <stop offset="0.17" stop-color="#b41d4a"/>
-      <stop offset="0.43" stop-color="#a21b43"/>
-      <stop offset="0.7" stop-color="#971a3e"/>
-      <stop offset="1" stop-color="#931a3d"/>
-    </linearGradient>
-    <linearGradient id="linear-gradient-3" x1="258.49" y1="-16214.63" x2="258.49" y2="-16070.6" xlink:href="#linear-gradient-2"/>
-  </defs>
-  <title>Artboard 2</title>
-  <g id="_Group_" data-name="&lt;Group&gt;">
-    <path id="_Path_" data-name="&lt;Path&gt;" class="cls-1" d="M384.64,89.68a182,182,0,0,0-279.28,26.59A140.53,140.53,0,0,1,343.93,264.32a98.42,98.42,0,0,1-9.69,15,141.32,141.32,0,0,1-24.32,25.42L256,358.66l-58.47,58.47L256,475.61,384.64,347A181.93,181.93,0,0,0,384.64,89.68Z"/>
-    <path id="_Path_2" data-name="&lt;Path&gt;" class="cls-2" d="M361.85,195.67a140.53,140.53,0,0,0-256.48-79.41l-1.06,1.56c-1.05,1.58-2.08,3.17-3.07,4.79L101,123a182,182,0,0,0,26.34,224L168,387.57l58.47-58.47-40.61-40.61a99.23,99.23,0,1,1,158.11-24.17A139.87,139.87,0,0,0,361.85,195.67Z"/>
-    <path id="_Path_3" data-name="&lt;Path&gt;" class="cls-3" d="M320.52,220.82a62.06,62.06,0,1,1-6.66-27.94A61.24,61.24,0,0,1,320.52,220.82Z"/>
-  </g>
+<path style="display: inline;" d="M0.513,255.987c0,101.127,58.76,188.531,144.006,229.938L22.645,152.016
+		C8.472,183.779,0.513,218.96,0.513,255.987z M428.476,243.101c0-31.588-11.341-53.446-21.06-70.45
+		c-12.949-21.059-25.088-38.874-25.088-59.92c0-23.492,17.803-45.349,42.891-45.349c1.148,0,2.221,0.137,3.307,0.199
+		C383.089,25.938,322.521,0.5,256,0.5c-89.263,0-167.784,45.798-213.47,115.149c6.001,0.2,11.652,0.325,16.443,0.325
+		c26.723,0,68.104-3.244,68.104-3.244c13.76-0.823,15.395,19.412,1.634,21.046c0,0-13.848,1.622-29.243,2.42l93.042,276.747
+		l55.903-167.685l-39.797-109.062c-13.773-0.798-26.798-2.42-26.798-2.42c-13.761-0.824-12.151-21.87,1.622-21.046
+		c0,0,42.18,3.244,67.293,3.244c26.71,0,68.092-3.244,68.092-3.244c13.773-0.823,15.395,19.412,1.622,21.046
+		c0,0-13.86,1.622-29.23,2.42l92.332,274.638l25.487-85.134C421.988,292.491,428.476,264.957,428.476,243.101z M260.491,278.331
+		l-76.662,222.765C206.722,507.819,230.937,511.5,256,511.5c29.768,0,58.299-5.14,84.847-14.484c-0.674-1.098-1.31-2.258-1.821-3.53
+		L260.491,278.331z M480.199,133.427c1.098,8.134,1.722,16.867,1.722,26.261c0,25.924-4.866,55.08-19.425,91.509l-78.035,225.621
+		c75.952-44.289,127.026-126.565,127.026-220.831C511.487,211.574,500.135,169.806,480.199,133.427z">
+
+</path>
+
+</g>
+
 </svg>
