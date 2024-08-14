@@ -10300,7 +10300,7 @@ a.text-dark:hover, a.text-dark:focus {
             width: 350px;
             border-radius: 10px;
             box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
-            bottom: 90px;
+            bottom: 150px;
             right: 30px;
             overflow: hidden;
             z-index: 99;
@@ -10317,7 +10317,7 @@ a.text-dark:hover, a.text-dark:focus {
             font-weight: 400;
             justify-content: space-between;
             z-index: 98;
-            bottom: 25px;
+            bottom: 80px;
             right: 30px;
             font-size: 15px;
             padding: 10px 20px;
