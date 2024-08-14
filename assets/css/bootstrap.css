@@ -10311,6 +10311,7 @@ a.text-dark:hover, a.text-dark:focus {
         a.blantershow-chat {
             background: #fff;
             color: #404040;
+		text-decoration:none;
             position: fixed;
             display: flex;
             font-weight: 400;
