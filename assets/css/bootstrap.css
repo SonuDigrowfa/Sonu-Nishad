@@ -10615,76 +10615,80 @@ a.text-dark:hover, a.text-dark:focus {
         }
 
 
-/* From Uiverse.io by D3OXY */ 
+/* From Uiverse.io by G4b413l */ 
 .card {
   position: relative;
-  width: 350px;
-  aspect-ratio: 16/9;
-  background-color: #f2f2f2;
-  border-radius: 10px;
+  width: 11.875em;
+  height: 16.5em;
+  box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 120ms;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  perspective: 1000px;
-  box-shadow: 0 0 0 5px #ffffff80;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #fff;
+  padding: 0.5em;
+  padding-bottom: 3.4em;
 }
 
-
-
-.card__image {
-  width: 100%;
-  height: 100%;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-.card__content {
+.card::after {
+  content: "Add to Cart";
+  padding-top: 1.25em;
+  padding-left: 1.25em;
   position: absolute;
-  top: 0;
   left: 0;
+  bottom: -60px;
+  background: #00AC7C;
+  color: #fff;
+  height: 2.5em;
+  width: 90%;
+  transition: all 80ms;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.card .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 1.875em;
+  font-weight: 400;
+  color: #000;
+}
+
+.card .price {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 0.625em;
+  color: #000;
+}
+
+.card:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card:active::after {
+  content: "Added !";
+  height: 3.125em;
+}
+
+.text {
+  max-width: 55px;
+}
+
+.image {
+  background: rgb(241, 241, 241);
   width: 100%;
   height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover .card__content {
-  transform: rotateX(0deg);
-}
-
-.card__title {
-  margin: 0;
-  font-size: 20px;
-  color: #333;
-  font-weight: 700;
-}
-
-.card__description {
-  margin: 10px 0 10px;
-  font-size: 12px;
-  color: #777;
-  line-height: 1.4;
-}
-
-.card__button {
-  padding: 15px;
-  border-radius: 8px;
-  background: #ef3724;
-  border: none;
-  color: white;
-}
-
-.secondary {
-  background: transparent;
-  color: #777;
-  border: 1px solid #777;
+  display: grid;
+  place-items: center;
 }
