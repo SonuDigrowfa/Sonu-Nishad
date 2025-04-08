@@ -15,18 +15,22 @@
     "https://gsmcradle.com/"
   ];
 
-  let clickCount = 0;
+  // Start at a random index on each page load
+  let clickCount = Math.floor(Math.random() * urls.length);
 
-  document.getElementById("cycleLink").addEventListener("click", function (e) {
+  // Optional: update the visible href on the page (not required)
+  const link = document.getElementById("cycleLink");
+  link.href = urls[clickCount % urls.length];
+
+  link.addEventListener("click", function (e) {
     e.preventDefault();
 
-    // Get the current URL to open
     const currentUrl = urls[clickCount % urls.length];
 
     // Open in a new tab
     window.open(currentUrl, '_blank');
 
-    // Increment the click count
+    // Go to next link in the cycle
     clickCount++;
   });
 </script>
