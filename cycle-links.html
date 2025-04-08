@@ -23,8 +23,8 @@
     // Get the current URL to open
     const currentUrl = urls[clickCount % urls.length];
 
-    // Open in the same tab or use _blank for a new tab
-    window.location.href = currentUrl;
+    // Open in a new tab
+    window.open(currentUrl, '_blank');
 
     // Increment the click count
     clickCount++;
