@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cycle Through Links</title>
+</head>
+<body>
+
+<a href="#" id="cycleLink">Click me</a>
+
+<script>
+  // List of URLs to cycle through
+  const urls = [
+    "https://mygsm24.com/",
+    "https://gsmradix.com/",
+    "https://gsmcradle.com/"
+  ];
+
+  let clickCount = 0;
+
+  document.getElementById("cycleLink").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Get the current URL to open
+    const currentUrl = urls[clickCount % urls.length];
+
+    // Open in the same tab or use _blank for a new tab
+    window.location.href = currentUrl;
+
+    // Increment the click count
+    clickCount++;
+  });
+</script>
+
+</body>
+</html>
