@@ -133,12 +133,8 @@ img {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff;
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-  font-size: 0.95rem;
+  object-fit: cover;
+  border: 2px solid var(--border-strong);
   box-shadow: 0 6px 20px var(--accent-glow);
 }
 
