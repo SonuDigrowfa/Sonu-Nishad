@@ -245,4 +245,23 @@
       window.open(waUrl, '_blank', 'noopener,noreferrer');
     });
   }
+  // Scroll-Reveal Animation
+  const revealTargets = document.querySelectorAll('section .section-header, section .card, section .exp-card');
+  if ('IntersectionObserver' in window && revealTargets.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+    );
+    revealTargets.forEach((el) => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  }
 })();
