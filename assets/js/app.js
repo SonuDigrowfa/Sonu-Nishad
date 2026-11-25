@@ -25,17 +25,53 @@
     });
   }
 
-  // Mobile Menu
+  // Mobile Menu & Scroll Effects
+  const navbar = document.querySelector('.navbar');
   const menuBtn = document.getElementById('mobile-menu-btn');
   const navLinks = document.getElementById('nav-links');
+
+  function setMenuOpen(open) {
+    if (!navLinks || !menuBtn) return;
+    navLinks.classList.toggle('open', open);
+    menuBtn.innerHTML = open
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+    menuBtn.setAttribute('aria-expanded', String(open));
+  }
+
   if (menuBtn && navLinks) {
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setMenuOpen(!navLinks.classList.contains('open'));
     });
     navLinks.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+        setMenuOpen(false);
+      }
     });
   }
+
+  // Scroll-spy & Navbar Shadow
+  const sections = document.querySelectorAll('main section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  function onScroll() {
+    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 12);
+    if (!sections.length || !navAnchors.length) return;
+    let current = '';
+    sections.forEach((sec) => {
+      if (window.scrollY >= sec.offsetTop - 130) {
+        current = sec.id;
+      }
+    });
+    navAnchors.forEach((a) => {
+      a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
   // Floating Chat Popover
   const chatFab = document.getElementById('chat-fab');
