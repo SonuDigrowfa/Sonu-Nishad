@@ -321,7 +321,7 @@ section {
 .status-pill {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   padding: 6px 14px;
   border-radius: 999px;
   background: rgba(16, 185, 129, 0.1);
@@ -329,6 +329,8 @@ section {
   color: var(--success);
   font-size: 0.84rem;
   font-weight: 600;
+  white-space: nowrap;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 
@@ -1200,6 +1202,11 @@ footer {
 
 @media (max-width: 520px) {
   .container { padding: 0 16px; }
+  .status-pill {
+    font-size: 0.74rem;
+    padding: 5px 11px;
+    gap: 7px;
+  }
   .card,
   .exp-card,
   .hero-card { padding: 20px; }
