@@ -676,17 +676,22 @@ section {
 
 .exp-header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 0;
+}
+
+.exp-header > div:first-child {
+  flex: 1 1 260px;
+  min-width: 0;
 }
 
 .exp-meta-right {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .exp-chevron {
@@ -1008,7 +1013,7 @@ section {
 /* Education */
 .edu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 
@@ -1035,11 +1040,13 @@ section {
 .contact-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.15fr;
-  gap: 28px;
+  gap: 24px;
+  align-items: stretch;
 }
 
 .contact-cards {
   display: grid;
+  grid-auto-rows: 1fr;
   gap: 14px;
 }
 
@@ -1189,6 +1196,7 @@ footer {
   .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 
@@ -1250,8 +1258,42 @@ footer {
   }
 }
 
+@media (max-width: 640px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .exp-header > div:first-child {
+    flex: none;
+    width: 100%;
+  }
+  .exp-meta-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 520px) {
   .container { padding: 0 16px; }
+  .ui-tabs {
+    display: flex;
+    width: 100%;
+  }
+  .ui-tab-btn {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
   .status-pill {
     font-size: 0.74rem;
     padding: 5px 11px;
