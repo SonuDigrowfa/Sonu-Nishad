@@ -138,7 +138,13 @@
           </p>
         </div>
 
-        <div class="about-grid">
+        <div class="ui-tabs" data-tab-group="about">
+          <button type="button" class="ui-tab-btn active" data-tab-target="about-summary">Professional Summary</button>
+          <button type="button" class="ui-tab-btn" data-tab-target="about-details">Quick Details</button>
+          <button type="button" class="ui-tab-btn" data-tab-target="about-focus">AI &amp; Automation Stack</button>
+        </div>
+
+        <div class="tab-panel active" id="about-summary" data-tab-panel="about">
           <div class="card">
             <h3 style="font-family: var(--font-display); margin-bottom: 14px;">Professional Summary</h3>
             <p style="color: var(--text-muted); margin-bottom: 14px;">
@@ -148,7 +154,9 @@
               Proficient in leveraging AI tools (Claude, Antigravity IDE, ChatGPT, Gemini) to rapidly ship production-ready applications across React, Node.js, PHP, and WordPress. Specialized in RAG, MCP, AI Agents, LLMs, Webhook Automation, and workflow orchestration using n8n, Zapier, Composio, Zernio, Zoho CRM, Razorpay, and Google Apps Script.
             </p>
           </div>
+        </div>
 
+        <div class="tab-panel" id="about-details" data-tab-panel="about">
           <div class="card">
             <h3 style="font-family: var(--font-display); margin-bottom: 16px;">Quick Details</h3>
             <div class="info-list">
@@ -173,6 +181,18 @@
                 <span class="info-val">Hindi &amp; English</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="about-focus" data-tab-panel="about">
+          <div class="card">
+            <h3 style="font-family: var(--font-display); margin-bottom: 14px;">What I Deliver</h3>
+            <ul class="exp-bullets">
+              <li>Automated SEO blogging pipelines and AI-driven workflow automations using LLMs, RAG, MCP, and AI Agents.</li>
+              <li>Custom Node.js &amp; React dashboards alongside workshop registration forms with dual Razorpay payment &amp; upsell flows.</li>
+              <li>Webhook-based form-to-Google-Sheets automations (via Google Apps Script) and custom Cold Email CRMs.</li>
+              <li>High-converting WordPress &amp; WooCommerce storefronts with Shiprocket shipping, REST APIs, and Core Web Vitals optimization.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -300,25 +320,30 @@
           <div class="section-eyebrow">03 / Career</div>
           <h2 class="section-title">Work Experience</h2>
           <p class="section-desc">
-            Over 4 years of delivering production web platforms, eCommerce stores, and AI-driven automation pipelines.
+            Over 4 years of delivering production web platforms, eCommerce stores, and AI-driven automation pipelines. Click any role to view highlights.
           </p>
         </div>
 
         <div class="timeline">
-          <article class="exp-card">
+          <article class="exp-card open">
             <div class="exp-header">
               <div>
                 <h3 class="exp-role">Website Developer &amp; AI Engineer</h3>
                 <div class="exp-company">Webrigo Business Solutions Pvt Ltd (Aylence AI)</div>
               </div>
-              <span class="exp-date">2026 – Present (Current)</span>
+              <div class="exp-meta-right">
+                <span class="exp-date">2026 – Present (Current)</span>
+                <span class="exp-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </div>
             </div>
-            <ul class="exp-bullets">
-              <li>Built automated SEO blogging pipelines and AI-driven workflow automations using LLMs, RAG, MCP, AI Agents, and webhook integrations.</li>
-              <li>Engineered custom Node.js and React dashboards alongside workshop registration forms featuring dual Razorpay payment setups and integrated upsell flows.</li>
-              <li>Developed webhook-based form-to-Google-Sheets automations (via Google Apps Script) to sync real-time payment statuses and user details.</li>
-              <li>Integrated Zernio and Composio tools for automated multi-platform social posting (LinkedIn, YouTube, Facebook) and built a custom CRM for cold email outreach.</li>
-            </ul>
+            <div class="exp-body">
+              <ul class="exp-bullets">
+                <li>Built automated SEO blogging pipelines and AI-driven workflow automations using LLMs, RAG, MCP, AI Agents, and webhook integrations.</li>
+                <li>Engineered custom Node.js and React dashboards alongside workshop registration forms featuring dual Razorpay payment setups and integrated upsell flows.</li>
+                <li>Developed webhook-based form-to-Google-Sheets automations (via Google Apps Script) to sync real-time payment statuses and user details.</li>
+                <li>Integrated Zernio and Composio tools for automated multi-platform social posting (LinkedIn, YouTube, Facebook) and built a custom CRM for cold email outreach.</li>
+              </ul>
+            </div>
           </article>
 
           <article class="exp-card">
@@ -327,13 +352,18 @@
                 <h3 class="exp-role">WordPress Website Developer</h3>
                 <div class="exp-company">Big Brand Bucket Pvt Ltd</div>
               </div>
-              <span class="exp-date">July 2024 – May 2026 (1.10 Years)</span>
+              <div class="exp-meta-right">
+                <span class="exp-date">July 2024 – May 2026 (1.10 Years)</span>
+                <span class="exp-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </div>
             </div>
-            <ul class="exp-bullets">
-              <li>Developed and customized responsive WordPress websites, WooCommerce stores, custom themes, and plugins tailored to client requirements.</li>
-              <li>Built AI-assisted web features, dashboards, and automation scripts using Claude, Antigravity IDE, ChatGPT, and Gemini to accelerate delivery and code quality.</li>
-              <li>Integrated payment gateways, Shiprocket shipping workflows, REST APIs, and technical SEO optimizations for performance and Core Web Vitals.</li>
-            </ul>
+            <div class="exp-body">
+              <ul class="exp-bullets">
+                <li>Developed and customized responsive WordPress websites, WooCommerce stores, custom themes, and plugins tailored to client requirements.</li>
+                <li>Built AI-assisted web features, dashboards, and automation scripts using Claude, Antigravity IDE, ChatGPT, and Gemini to accelerate delivery and code quality.</li>
+                <li>Integrated payment gateways, Shiprocket shipping workflows, REST APIs, and technical SEO optimizations for performance and Core Web Vitals.</li>
+              </ul>
+            </div>
           </article>
 
           <article class="exp-card">
@@ -342,13 +372,18 @@
                 <h3 class="exp-role">WordPress Website Developer</h3>
                 <div class="exp-company">Zenith Leisure Holidays Ltd (Division of Zenith Go Digital)</div>
               </div>
-              <span class="exp-date">July 2023 – April 2024 (1.4 Years)</span>
+              <div class="exp-meta-right">
+                <span class="exp-date">July 2023 – April 2024 (1.4 Years)</span>
+                <span class="exp-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </div>
             </div>
-            <ul class="exp-bullets">
-              <li>Designed and maintained high-traffic travel and digital marketing websites using Elementor Pro, Divi, ACF, and custom PHP/HTML/CSS/JavaScript.</li>
-              <li>Managed staging environments, cPanel server setups, MySQL databases, and seamless website migrations across hosting providers.</li>
-              <li>Implemented SEO-focused plugins, lead-capture forms, and ongoing technical troubleshooting to ensure maximum uptime.</li>
-            </ul>
+            <div class="exp-body">
+              <ul class="exp-bullets">
+                <li>Designed and maintained high-traffic travel and digital marketing websites using Elementor Pro, Divi, ACF, and custom PHP/HTML/CSS/JavaScript.</li>
+                <li>Managed staging environments, cPanel server setups, MySQL databases, and seamless website migrations across hosting providers.</li>
+                <li>Implemented SEO-focused plugins, lead-capture forms, and ongoing technical troubleshooting to ensure maximum uptime.</li>
+              </ul>
+            </div>
           </article>
 
           <article class="exp-card">
@@ -357,12 +392,17 @@
                 <h3 class="exp-role">WordPress Website Developer</h3>
                 <div class="exp-company">Aaru Web Solutions</div>
               </div>
-              <span class="exp-date">June 2022 – May 2023 (1.5 Years)</span>
+              <div class="exp-meta-right">
+                <span class="exp-date">June 2022 – May 2023 (1.5 Years)</span>
+                <span class="exp-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </div>
             </div>
-            <ul class="exp-bullets">
-              <li>Built mobile-friendly business and eCommerce websites from scratch using WordPress, WooCommerce, WPBakery, and Beaver Builder.</li>
-              <li>Configured DNS/nameservers, custom domain emails (cPanel with Gmail, Outlook, Yahoo), and provided ongoing client technical support.</li>
-            </ul>
+            <div class="exp-body">
+              <ul class="exp-bullets">
+                <li>Built mobile-friendly business and eCommerce websites from scratch using WordPress, WooCommerce, WPBakery, and Beaver Builder.</li>
+                <li>Configured DNS/nameservers, custom domain emails (cPanel with Gmail, Outlook, Yahoo), and provided ongoing client technical support.</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
@@ -400,29 +440,63 @@
       <div class="container">
         <div class="section-header">
           <div class="section-eyebrow">05 / Credentials</div>
-          <h2 class="section-title">Education &amp; Certifications</h2>
+          <h2 class="section-title">Education &amp; Personal Details</h2>
         </div>
 
-        <div class="edu-grid">
-          <div class="card">
-            <div class="edu-year">2018</div>
-            <h3 class="edu-title">B.A. (Honors)</h3>
-            <p class="edu-school">Ramanujan College, University of Delhi</p>
+        <div class="ui-tabs" data-tab-group="edu">
+          <button type="button" class="ui-tab-btn active" data-tab-target="edu-certs">Education &amp; Certifications</button>
+          <button type="button" class="ui-tab-btn" data-tab-target="edu-personal">Personal Details</button>
+        </div>
+
+        <div class="tab-panel active" id="edu-certs" data-tab-panel="edu">
+          <div class="edu-grid">
+            <div class="card">
+              <div class="edu-year">2018</div>
+              <h3 class="edu-title">B.A. (Honors)</h3>
+              <p class="edu-school">Ramanujan College, University of Delhi</p>
+            </div>
+            <div class="card">
+              <div class="edu-year">Certification</div>
+              <h3 class="edu-title">Diploma in Computer Applications (D.C.A.)</h3>
+              <p class="edu-school">Sri Ram Computer Education, Laxmi Nagar, Delhi</p>
+            </div>
+            <div class="card">
+              <div class="edu-year">2015</div>
+              <h3 class="edu-title">Senior Secondary (12th)</h3>
+              <p class="edu-school">Government Boys Senior Secondary School, CBSE Board, Delhi</p>
+            </div>
+            <div class="card">
+              <div class="edu-year">2012</div>
+              <h3 class="edu-title">Secondary (10th)</h3>
+              <p class="edu-school">Government Boys Senior Secondary School, CBSE Board, Delhi</p>
+            </div>
           </div>
+        </div>
+
+        <div class="tab-panel" id="edu-personal" data-tab-panel="edu">
           <div class="card">
-            <div class="edu-year">Certification</div>
-            <h3 class="edu-title">Diploma in Computer Applications (D.C.A.)</h3>
-            <p class="edu-school">Sri Ram Computer Education, Laxmi Nagar, Delhi</p>
-          </div>
-          <div class="card">
-            <div class="edu-year">2015</div>
-            <h3 class="edu-title">Senior Secondary (12th)</h3>
-            <p class="edu-school">Government Boys Senior Secondary School, CBSE Board, Delhi</p>
-          </div>
-          <div class="card">
-            <div class="edu-year">2012</div>
-            <h3 class="edu-title">Secondary (10th)</h3>
-            <p class="edu-school">Government Boys Senior Secondary School, CBSE Board, Delhi</p>
+            <div class="info-list">
+              <div class="info-item">
+                <span class="info-label">Date of Birth</span>
+                <span class="info-val">10th October 1995</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Nationality</span>
+                <span class="info-val">Indian</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Languages</span>
+                <span class="info-val">Hindi &amp; English</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Hobbies</span>
+                <span class="info-val">Reading Books</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Address</span>
+                <span class="info-val">House No. 250, Karkarduma, East Delhi - 110092</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -498,6 +572,26 @@
       </div>
     </div>
   </footer>
+
+  <!-- Project Quick-Preview Modal -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <span class="project-cat" id="modal-cat">Category</span>
+      <h3 class="modal-title" id="modal-title">domain.com</h3>
+      <p class="modal-desc" id="modal-desc">Live production website.</p>
+      <div class="modal-actions">
+        <a id="modal-visit-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Website
+        </a>
+        <a href="#contact" class="btn btn-outline" onclick="document.getElementById('project-modal').classList.remove('open')">
+          Build Similar Site
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Floating Quick Chat -->
   <div class="chat-popover" id="chat-popover">

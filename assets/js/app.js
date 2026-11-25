@@ -114,16 +114,16 @@
         grid.innerHTML = visible
           .map(
             (p) => `
-            <a class="project-card" href="${p.url}" target="_blank" rel="noopener noreferrer">
-              <div class="project-top">
+            <button type="button" class="project-card" data-domain="${p.domain}" data-url="${p.url}" data-cat="${p.category}" style="text-align: left; color: inherit; font: inherit; cursor: pointer;">
+              <div class="project-top" style="width: 100%;">
                 <span class="project-cat">${p.category}</span>
                 <span class="project-ext"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
               </div>
-              <div>
+              <div style="width: 100%;">
                 <div class="project-domain">${p.domain}</div>
-                <div class="project-url">${p.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</div>
+                <div class="project-url">Click to preview &amp; visit</div>
               </div>
-            </a>`
+            </button>`
           )
           .join('');
       }
@@ -142,6 +142,57 @@
 
     renderProjects();
   }
+
+  // Project Quick-Preview Modal
+  const modal = document.getElementById('project-modal');
+  const modalClose = document.getElementById('modal-close');
+  const modalCat = document.getElementById('modal-cat');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalLink = document.getElementById('modal-visit-link');
+
+  if (grid && modal) {
+    grid.addEventListener('click', (e) => {
+      const card = e.target.closest('.project-card');
+      if (!card) return;
+      modalCat.textContent = card.dataset.cat;
+      modalTitle.textContent = card.dataset.domain;
+      modalDesc.textContent = `Live production ${card.dataset.cat} website engineered and delivered for ${card.dataset.domain}.`;
+      modalLink.href = card.dataset.url;
+      modal.classList.add('open');
+    });
+
+    const closeModal = () => modal.classList.remove('open');
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  }
+
+  // Click-to-Expand Experience Cards
+  document.querySelectorAll('.exp-card').forEach((card) => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('open');
+    });
+  });
+
+  // Interactive Tabs (About & Credentials)
+  document.querySelectorAll('[data-tab-group]').forEach((group) => {
+    const groupName = group.dataset.tabGroup;
+    group.addEventListener('click', (e) => {
+      const btn = e.target.closest('.ui-tab-btn');
+      if (!btn) return;
+      const targetId = btn.dataset.tabTarget;
+      group.querySelectorAll('.ui-tab-btn').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll(`[data-tab-panel="${groupName}"]`).forEach((panel) => {
+        panel.classList.toggle('active', panel.id === targetId);
+      });
+    });
+  });
 
   // Contact Form -> WhatsApp / Mailto
   const contactForm = document.getElementById('contact-form');
